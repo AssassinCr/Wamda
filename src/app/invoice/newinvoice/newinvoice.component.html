@@ -1,0 +1,166 @@
+<link href="../../assets/css/newinvoice.css" rel="stylesheet" />
+
+<div class="main-content">
+    <div class="container-fluid">
+ 	     <div class="row">
+                <!-- TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST -->
+
+                         <!-- @@@@@@@@@@@@ New Table @@@@@@@@@@@@ -->
+                <div class="card">
+
+
+                  <!--  Nav Tabs  -->
+                    <div class="card-header card-header-tabs" data-background-color="rose">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+
+
+                               <!--  3 Tabs  -->
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="active" rel="tooltip" title="New Invoice">
+                                        <a href="#profile" data-toggle="tab">
+                                            <i class="glyphicon glyphicon-paste"></i>
+                                        </a>
+                                    </li>
+
+                                    <li rel="tooltip" title="Manage Invoice">
+                                        <a href="#messages" data-toggle="tab">
+                                            <i class="glyphicon glyphicon-wrench"></i>
+                                        </a>
+                                    </li>
+
+                                    <li rel="tooltip" title="POS Invoice">
+                                        <a href="#settings" data-toggle="tab">
+                                            <i class="glyphicon glyphicon-record"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                               <!--  end of 3 Tabs  -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                  <!--  end of Nav Tabs  -->
+
+
+                  <!--  Contact Tabs  -->
+                    <div class="card-content">
+                        <div class="tab-content">
+
+
+                  <!--  First Tab Contact  -->
+                            <div class="tab-pane active" id="profile">
+                                <form action="" method="post">
+                                  <label for="cust-name">Customer name <span style="color: red">*</span></label>
+                                  <div style="display: inline-block; margin-left: 14px; width: 231px;">
+                                    <input type="text" name="cust-name" placeholder="Customer name" class="form-control"> 
+                                  </div>
+                                  <br>  
+                                  <label for="date">Date <span style="color: red">*</span></label>
+                                  <div style="display: inline-block; margin-left: 87px; width: 233px;">
+                                    <input type="datetime-local" name="date" class="form-control">
+                                  </div>
+
+                                  <input type="submit" name="add-customer" value="New Customer" class="btn btn-success submit" style="    margin-left: 23px;">
+                                </form>
+                               <table class="table" style="overflow: scroll;">
+                                <thead>
+                                  <tr>
+                                    <th>Item Information <span style="color: red">*</span></th>
+                                    <th>Available Quantity</th>
+                                    <th>Unit</th>
+                                    <th>Quantity <span style="color: red">*</span></th>
+                                    <th>Rate <span style="color: red">*</span></th>
+                                    <th>Discount / Pcs.</th>
+                                    <th>Total <span style="color: red">*</span></th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="grd">
+                               
+                                  <tr align="center">
+                                    <td scope="row" colspan="1"><input type="text" name="new-medic" placeholder="Medicine name" class="form-control" style="text-align: left;"></td>
+                                    <td><input type="" name="avali-quant" placeholder="0" disabled="true" class="form-control"></td>
+                                    <td><input type="text" name="unit" placeholder="none" disabled="true" class="form-control"></td>
+                                    <td><input type="number" name="quantity" value="1" class="form-control"></td>
+                                    <td><input type="number" name="rate" value="0" class="form-control"></td>
+                                    <td><input type="number" name="dicount" value="0" class="form-control"></td>
+                                    <td><input type="" name="total" value="0" disabled="true" class="form-control"></td>
+                                    <td><button type="submit" style="padding-left: 5px;padding-right: 5px;" name="delete-medicine" value="delete" class="btn btn-danger">
+                                    <i class="material-icons" align="left">close</i>
+                                    </button></td>
+                                  </tr>
+                                </tbody>
+                                <tfoot class="grd">
+                                  <tr>
+                                    <td style="text-align:right;" colspan="6"><b>Total Tax:</b></td>
+                                    <td class="text-right">
+                                      <input type="text" id="total_tax_ammount" tabindex="-1" class="text-right valid" name="total_tax" value="0" disabled="true" class="form-control">
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td style="text-align:right;" colspan="6"><b>Total Discount:</b></td>
+                                    <td class="text-right">
+                                      <input type="text" id="total_discount" tabindex="-1" class="text-right valid" name="total_discount" value="0.00" disabled="true" class="form-control">
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td style="text-align:right;" colspan="6"><b>Grand Total</b></td>
+                                    <td class="text-right">
+                                      <input type="text" id="grand_total" tabindex="-1" class="text-right valid" name="garnd_total" value="2" disabled="true" class="form-control">
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      <button type="submit" name="Add_new_item" class="btn btn-info">Add New Item</button>
+                                    </td>
+                                    <td style="text-align:right;" colspan="5"><b>Paid Amount:</b></td>
+                                    <td class="text-right">
+                                      <input type="text" id="paind_amount" tabindex="-1" class="text-right valid" name="paind_amount" value="0.00" class="form-control">
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      <button type="submit" name="save_and_paid" class="btn btn-success">Save And Paid</button>
+                                    </td>
+                                    <td style="text-align:right;" colspan="5"><b>Due:</b></td>
+                                    <td class="text-right">
+                                      <input type="text" id="due" tabindex="-1" class="text-right valid" name="due" value="2" disabled="true" class="form-control">
+                                    </td>
+                                  </tr>
+                                </tfoot>
+                              </table>
+                            </div>
+                  <!--  end of First Tab Contact  -->
+
+                  <!--  Second Tab Contact  -->
+                            <div class="tab-pane" id="messages">
+
+                            </div>
+                  <!--  end of Second Tab Contact  -->
+
+                  <!--  Third Tab Contact  -->
+                            <div class="tab-pane" id="settings">
+
+                            </div>
+                  <!--  Third Tab Contact  -->
+
+
+                        </div>
+                    </div>
+                  <!--  end of Contact Tabs  -->
+
+
+                </div>
+         <!-- @@@@@@@@@@@@ End New Table @@@@@@@@@@@@ -->
+
+
+         </div>
+    </div>
+</div>
+
